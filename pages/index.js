@@ -78,19 +78,11 @@ export default function Home() {
         <div className="profile-content">
           <h2>Lucas Reis da Costa</h2>
           <p>
-            Desenvolvedor Full Stack com experiência em aplicações web modernas
-            e soluções inovadoras. Especialista em JavaScript, React, Node.js e
-            arquiteturas escaláveis.
+            Engenheiro Eletricista com experiência em desenvolvimento de
+            sistemas.
           </p>
-          <p>
-            Com mais de 5 anos de experiência no mercado de tecnologia, tenho
-            contribuído para projetos que impactam positivamente a experiência
-            dos usuários e trazem resultados significativos para as empresas.
-          </p>
-          <p>
-            Formado em Ciência da Computação, com especialização em
-            Desenvolvimento Web e apaixonado por novas tecnologias.
-          </p>
+          <p>...</p>
+          <p>...</p>
         </div>
       </section>
 
