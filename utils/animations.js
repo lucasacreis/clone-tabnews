@@ -1,21 +1,19 @@
-// Verifica se o código está sendo executado no navegador
-if (typeof window !== "undefined") {
-  // Executa o código apenas após o carregamento completo do DOM
-  window.addEventListener("DOMContentLoaded", function () {
-    // Animação dos ícones
-    const logoIcons = document.querySelectorAll(".logo-icon");
+export function initAnimations() {
+  // Animação dos ícones
+  const logoIcons = document.querySelectorAll(".logo-icon");
 
-    logoIcons.forEach((icon, index) => {
+  logoIcons.forEach((icon, index) => {
+    setTimeout(() => {
+      icon.style.transform = "scale(1.2)";
       setTimeout(() => {
-        icon.style.transform = "scale(1.2)";
-        setTimeout(() => {
-          icon.style.transform = "scale(1)";
-        }, 300);
-      }, index * 300);
-    });
+        icon.style.transform = "scale(1)";
+      }, 300);
+    }, index * 300);
+  });
 
-    // Texto de construção com efeito de digitação
-    const constructionTitle = document.querySelector(".construction-title");
+  // Texto de construção com efeito de digitação
+  const constructionTitle = document.querySelector(".construction-title");
+  if (constructionTitle) {
     const constructionIcon =
       constructionTitle.querySelector(".construction-icon");
     const textToType = "Página em construção..";
@@ -36,5 +34,5 @@ if (typeof window !== "undefined") {
         clearInterval(typeEffect);
       }
     }, 100);
-  });
+  }
 }
