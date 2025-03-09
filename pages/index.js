@@ -71,7 +71,7 @@ export default function Home() {
 
       <section className="profile">
         <img
-          src="../src/avatar.png"
+          src="avatar.png"
           alt="Lucas Reis da Costa"
           className="profile-image"
         />
