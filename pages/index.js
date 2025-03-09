@@ -1,45 +1,12 @@
 import { useEffect } from "react";
 import Head from "next/head";
+import { initAnimations } from "../utils/animations";
 
 export default function Home() {
   useEffect(() => {
-    // Animação dos ícones
-    const logoIcons = document.querySelectorAll(".logo-icon");
-
-    logoIcons.forEach((icon, index) => {
-      setTimeout(() => {
-        icon.style.transform = "scale(1.2)";
-        setTimeout(() => {
-          icon.style.transform = "scale(1)";
-        }, 300);
-      }, index * 300);
-    });
-
-    // Texto de construção com efeito de digitação
-    const constructionTitle = document.querySelector(".construction-title");
-    if (constructionTitle) {
-      const constructionIcon =
-        constructionTitle.querySelector(".construction-icon");
-      const textToType = "Página em construção..";
-
-      // Remover o texto original
-      constructionTitle.innerHTML = "";
-      constructionTitle.appendChild(constructionIcon);
-
-      let charIndex = 0;
-      const textElement = document.createElement("span");
-      constructionTitle.appendChild(textElement);
-
-      const typeEffect = setInterval(() => {
-        if (charIndex < textToType.length) {
-          textElement.textContent += textToType[charIndex];
-          charIndex++;
-        } else {
-          clearInterval(typeEffect);
-        }
-      }, 100);
-    }
-  }, []); // O array vazio garante que o efeito só é executado uma vez após a montagem do componente
+    // Inicializa as animações após o componente ser montado
+    initAnimations();
+  }, []);
 
   return (
     <div className="container">
@@ -71,18 +38,25 @@ export default function Home() {
 
       <section className="profile">
         <img
-          src="avatar.png"
+          src="/avatar.png"
           alt="Lucas Reis da Costa"
           className="profile-image"
         />
+
         <div className="profile-content">
           <h2>Lucas Reis da Costa</h2>
           <p>
-            Engenheiro Eletricista com experiência em desenvolvimento de
-            sistemas.
+            Engenheiro e Filósofo em busca de soluções através da criatividade.
           </p>
-          <p>...</p>
-          <p>...</p>
+          <p>
+            Com mais de 5 anos de experiência no mercado de tecnologia, tenho
+            contribuído para projetos que impactam positivamente a experiência
+            dos usuários e trazem resultados significativos para as empresas.
+          </p>
+          <p>
+            Formado em Engenharia Eétrica em processo de especialização em
+            Desenvolvimento Web e apaixonado por novas tecnologias.
+          </p>
         </div>
       </section>
 
