@@ -145,8 +145,33 @@ header {
     align-items: center;
     text-align: center;
   }
+}
 
-  .profile-image {
-    margin-bottom: 1.5rem;
-  }
+/* Ajuste para a imagem de perfil */
+.profile-image {
+  width: 160px;
+  height: 200px;
+  border-radius: 8px;
+  border: 3px solid var(--tiffany);
+  object-fit: contain; /* Alterado de 'cover' para 'contain' */
+  background-color: var(
+    --light-turquoise
+  ); /* Fundo leve para quando a imagem não preencher todo o espaço */
+  padding: 3px; /* Adiciona um pequeno padding para a imagem não tocar na borda */
+}
+
+/* Se você estiver usando o componente Image do Next.js */
+.profile-image-container {
+  width: 160px;
+  height: 200px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid var(--tiffany);
+  background-color: var(--light-turquoise);
+  padding: 3px;
+}
+
+.profile-image-container img {
+  object-fit: contain !important;
 }
